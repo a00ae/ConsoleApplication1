@@ -45,6 +45,7 @@ int main()
 	obj.name = "John Doe";
 	obj.printName(obj);
 
+
 	int size;
 	cout << "Enter the number of names to print: ";
 
