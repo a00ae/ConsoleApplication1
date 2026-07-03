@@ -18,16 +18,14 @@ class Youtube
 			cout << "sub: " << sub << endl;
 			cout << "**********************\n";
 			cout << endl;
+
 		}
 		void set(string n, int vid, int sb)
 		{
 			name = n;
 			videos = vid;
 			sub = sb;
-
 		}
-
-
 };
 
 
@@ -42,8 +40,4 @@ int main()
 
 	yt1.set("etalm", 50, 23000);
 	yt1.print();
-
-
-
-
 };
