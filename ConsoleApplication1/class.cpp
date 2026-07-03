@@ -2,34 +2,25 @@
 
 using namespace std;
 
-class Company
+class Circle
 {
 	private: 
-		string name;
-		int id;
-		int salary;
+		double raduis;
 
 	public:
-		void print()
+		void printArea()
 		{
-			cout << "**********************\n";
-			cout << "name " << name << endl;
-			cout << "id: " << id << endl;
-			cout << "salay: " << salary << endl;
-			cout << "**********************\n";
-			cout << endl;
+			double area = raduis * raduis * 3.14 ;
+			cout << "area of circle: "<< area << endl;
 
 		}
-		void setUser()
+		void setValue()
 		{
-			cout << "enter your name \n";
-			cin >> name;
-			cout << "enter your id \n";
-			cin >> id;
-			cout << "enter your salary \n";
-			cin >> salary;
+			cout << "enter your circle raduis? " << endl;
+			cin >> raduis;
 
 		}
+
 };
 
 
@@ -37,11 +28,8 @@ class Company
 
 int main()
 {
-	Company obj;
-	
-	obj.setUser();
-	obj.print();
+	Circle area;
+	area.setValue();
+	area.printArea();
 
-	//yt1.setUser();
-	//yt1.print();
 };
