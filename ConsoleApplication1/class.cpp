@@ -2,33 +2,36 @@
 
 using namespace std;
 
+class Youtube
+{
+	private: 
+		string name;
+		int videos;
+		int sub;
 
-class Company {
-public:
-	int id;
-	string name;
-	float salary;
+	public:
+		void display(string n, int vid, int sb)
+		{
+			name = n;
+			videos = vid;
+			sub = sb;
 
-	void seva(int i, string n, float sal)
-	{
-		id = i;
-		name = n;
-		salary = sal;
-
-	}
-
-
-	void display()
-	{
-		cout << id << " " << name << " " << salary << endl;
-	}
+		}
+		void print()
+		{
+			cout << "chinl " << name << endl;
+			cout << "video: " << videos << endl;
+			cout << "sub: " << sub << endl;
+		}
 
 };
+
+
 int main()
 {
-	Company obj1;
-	obj1.seva(1, "ahmed", 1200.1);
+	Youtube yt;
+	yt.display("elzuro", 100, 20000);
+	yt.print();
 
-	obj1.display();
 
 };
