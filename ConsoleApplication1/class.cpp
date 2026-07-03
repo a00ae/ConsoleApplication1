@@ -2,29 +2,33 @@
 
 using namespace std;
 
-class Youtube
+class Company
 {
 	private: 
 		string name;
-		int videos;
-		int sub;
+		int id;
+		int salary;
 
 	public:
 		void print()
 		{
 			cout << "**********************\n";
-			cout << "chinl " << name << endl;
-			cout << "video: " << videos << endl;
-			cout << "sub: " << sub << endl;
+			cout << "name " << name << endl;
+			cout << "id: " << id << endl;
+			cout << "salay: " << salary << endl;
 			cout << "**********************\n";
 			cout << endl;
 
 		}
-		void set(string n, int vid, int sb)
+		void setUser()
 		{
-			name = n;
-			videos = vid;
-			sub = sb;
+			cout << "enter your name \n";
+			cin >> name;
+			cout << "enter your id \n";
+			cin >> id;
+			cout << "enter your salary \n";
+			cin >> salary;
+
 		}
 };
 
@@ -33,11 +37,11 @@ class Youtube
 
 int main()
 {
-	Youtube yt;
-	Youtube yt1;
-	yt.set("elzuro", 100, 20000);
-	yt.print();
+	Company obj;
+	
+	obj.setUser();
+	obj.print();
 
-	yt1.set("etalm", 50, 23000);
-	yt1.print();
+	//yt1.setUser();
+	//yt1.print();
 };
