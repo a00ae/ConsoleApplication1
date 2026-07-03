@@ -31,20 +31,15 @@ class Company
 	public:
 		void setValue()
 		{
-			//int res;
-			//cin >> res;
-			//if (res >= 1) {
-			//	for (int i = 0; i < res; i++) {
+			
 				cout << "enter your name? " << endl;
 				cin >> name;
 				cout << "enter your salary? " << endl;
 				cin >> salary;
-				//}
+				
 
-			//}
-			//else {
-			//	cout << "Sorry, you did not enter the correct entrance.";
-			//}
+		
+			
 
 
 		}
