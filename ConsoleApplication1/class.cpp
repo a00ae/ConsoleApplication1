@@ -10,28 +10,40 @@ class Youtube
 		int sub;
 
 	public:
-		void display(string n, int vid, int sb)
+		void print()
+		{
+			cout << "**********************\n";
+			cout << "chinl " << name << endl;
+			cout << "video: " << videos << endl;
+			cout << "sub: " << sub << endl;
+			cout << "**********************\n";
+			cout << endl;
+		}
+		void set(string n, int vid, int sb)
 		{
 			name = n;
 			videos = vid;
 			sub = sb;
 
 		}
-		void print()
-		{
-			cout << "chinl " << name << endl;
-			cout << "video: " << videos << endl;
-			cout << "sub: " << sub << endl;
-		}
+
 
 };
+
+
 
 
 int main()
 {
 	Youtube yt;
-	yt.display("elzuro", 100, 20000);
+	Youtube yt1;
+	yt.set("elzuro", 100, 20000);
 	yt.print();
+
+	yt1.set("etalm", 50, 23000);
+	yt1.print();
+
+
 
 
 };
