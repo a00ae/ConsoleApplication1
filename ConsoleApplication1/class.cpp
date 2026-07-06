@@ -57,53 +57,76 @@ using namespace std;
 //
 //};
 
-class Cal
-{
+//class Cal
+//{
+//
+//	private: 
+//		int n1, n2;
+//
+//	public: 
+//		Cal()
+//		{
+//
+//
+//			cout << "Enter the first number" << endl;
+//			cin >> n1;
+//
+//
+//
+//			cout << "Enter the last number" << endl;
+//			cin >> n2;
+//
+//
+//		}
+//
+//		Cal(int x, int y)
+//		{
+//			n1 = x;
+//			n2 = y;
+//		}
+//		int sum()
+//		{
+//			return n1 + n2;
+//		}
+//		float divide()
+//		{
+//			return (double)n1 / (double)n2;
+//		}
+//		int mod()
+//		{
+//			return n1 % n2;
+//		}
+//		int mult()
+//		{
+//			return n1 * n2;
+//		}
+//
+//};
 
-	private: 
-		int n1, n2;
 
-	public: 
+class Cal {
+	private:
+		int x, y;
+	public:
+		//constrctour
+
+
 		Cal()
 		{
-
-
-			cout << "Enter the first number" << endl;
-			cin >> n1;
-
-
-
-			cout << "Enter the last number" << endl;
-			cin >> n2;
-
-
+			x = 20;
+			y = 10;
 		}
-
-		Cal(int x, int y)
+		~Cal()
 		{
-			n1 = x;
-			n2 = y;
+			cout << "bay" << endl;
 		}
-		int sum()
-		{
-			return n1 + n2;
-		}
-		float divide()
-		{
-			return (double)n1 / (double)n2;
-		}
-		int mod()
-		{
-			return n1 % n2;
-		}
-		int mult()
-		{
-			return n1 * n2;
-		}
-
+		int sum();
 };
-
-
+//
+int Cal::sum()
+{
+	return x + y;
+}
 
 
 
@@ -131,10 +154,15 @@ int main()
 	//cal
 
 	Cal cal;
-	cout<< "sum: " << cal.sum() << endl;
-	cout<< "divide: " << cal.divide() << endl;
-	cout<< "mod: " << cal.mod() << endl;
-	cout<< "mult: " << cal.mult() << endl;
+	//cal.~Cal();
+	cout << cal.sum() << endl;
+	//cout<< "sum: " << cal.sum() << endl;
+	//cout<< "divide: " << cal.divide() << endl;
+	//cout<< "mod: " << cal.mod() << endl;
+	//cout<< "mult: " << cal.mult() << endl;
+
+
+
 
 
 	 
