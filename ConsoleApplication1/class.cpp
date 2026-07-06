@@ -104,6 +104,10 @@ using namespace std;
 //};
 
 
+
+
+//friend function
+
 class Cal {
 	private:
 		int x, y;
@@ -111,23 +115,52 @@ class Cal {
 		//constrctour
 
 
-		Cal()
-		{
-			x = 20;
-			y = 10;
-		}
+		Cal();
 		~Cal()
 		{
 			cout << "bay" << endl;
 		}
 		int sum();
 };
+Cal::Cal()
+{
+	x = 20;
+	y = 10;
+};
+
+
 //
 int Cal::sum()
 {
 	return x + y;
 }
 
+
+class Stu
+{
+private:
+	string name;
+	int mark;
+public:
+	Stu(string n, int m)
+	{
+		name = n;
+		mark = m;
+	}
+	void print();
+
+	friend void show(Stu ob1);
+
+};
+
+void Stu::print() {
+	cout << "enter is number " << endl;
+}
+
+void show(Stu ob1)
+{
+	cout << "mark is " << ob1.mark << endl;
+}
 
 
 int main()
@@ -153,9 +186,9 @@ int main()
 
 	//cal
 
-	Cal cal;
+	//Cal cal;
 	//cal.~Cal();
-	cout << cal.sum() << endl;
+	//cout << cal.sum() << endl;
 	//cout<< "sum: " << cal.sum() << endl;
 	//cout<< "divide: " << cal.divide() << endl;
 	//cout<< "mod: " << cal.mod() << endl;
@@ -163,6 +196,11 @@ int main()
 
 
 
+	//friend
+
+	Stu st("ahmed", 100);
+	st.print();
+	show(st);
 
 
 	 
