@@ -23,41 +23,85 @@ using namespace std;
 //
 //};
 
-class Company
+//class Company
+//{
+//	private: 
+//		string name;
+//		int salary;
+//	public:
+//		void setValue()
+//		{
+//			
+//				cout << "enter your name? " << endl;
+//				cin >> name;
+//				cout << "enter your salary? " << endl;
+//				cin >> salary;
+//				
+//
+//		
+//			
+//
+//
+//		}
+//
+//		void print()
+//		{
+//			cout << "your name is " << name << endl;
+//			cout << "your salary is " << salary << endl;
+//		}
+//		int result()
+//		{
+//			return salary;
+//		}
+//
+//
+//};
+
+class Cal
 {
+
 	private: 
-		string name;
-		int salary;
-	public:
-		void setValue()
-		{
-			
-				cout << "enter your name? " << endl;
-				cin >> name;
-				cout << "enter your salary? " << endl;
-				cin >> salary;
-				
+		int n1, n2;
 
-		
-			
+	public: 
+		Cal()
+		{
+
+
+			cout << "Enter the first number" << endl;
+			cin >> n1;
+
+
+
+			cout << "Enter the last number" << endl;
+			cin >> n2;
 
 
 		}
 
-		void print()
+		Cal(int x, int y)
 		{
-			cout << "your name is " << name << endl;
-			cout << "your salary is " << salary << endl;
+			n1 = x;
+			n2 = y;
 		}
-		int result()
+		int sum()
 		{
-			return salary;
+			return n1 + n2;
 		}
-
+		float divide()
+		{
+			return (double)n1 / (double)n2;
+		}
+		int mod()
+		{
+			return n1 % n2;
+		}
+		int mult()
+		{
+			return n1 * n2;
+		}
 
 };
-
-
 
 
 
@@ -69,20 +113,28 @@ int main()
 	//area.setValue();
 	//area.printArea();
 
-	Company ob1;
-	Company ob2;
+	//Company ob1;
+	//Company ob2;
 	//set
-	ob1.setValue();
-	ob2.setValue();
+	//ob1.setValue();
+	//ob2.setValue();
 
-	//print
-	ob1.print();
-	ob2.print();
+	////print
+	//ob1.print();
+	//ob2.print();
 
-	int res = ob1.result() + ob2.result();
+	//int res = ob1.result() + ob2.result();
 
-	cout << "result: " << res << endl;
+	//cout << "result: " << res << endl;
 
+
+	//cal
+
+	Cal cal;
+	cout<< "sum: " << cal.sum() << endl;
+	cout<< "divide: " << cal.divide() << endl;
+	cout<< "mod: " << cal.mod() << endl;
+	cout<< "mult: " << cal.mult() << endl;
 
 
 	 
