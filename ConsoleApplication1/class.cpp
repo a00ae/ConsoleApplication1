@@ -107,33 +107,33 @@ using namespace std;
 
 
 //friend function
-
-class Cal {
-	private:
-		int x, y;
-	public:
-		//constrctour
-
-
-		Cal();
-		~Cal()
-		{
-			cout << "bay" << endl;
-		}
-		int sum();
-};
-Cal::Cal()
-{
-	x = 20;
-	y = 10;
-};
-
-
 //
-int Cal::sum()
-{
-	return x + y;
-}
+//class Cal {
+//	private:
+//		int x, y;
+//	public:
+//		//constrctour
+//
+//
+//		Cal();
+//		~Cal()
+//		{
+//			cout << "bay" << endl;
+//		}
+//		int sum();
+//};
+//Cal::Cal()
+//{
+//	x = 20;
+//	y = 10;
+//};
+//
+//
+////
+//int Cal::sum()
+//{
+//	return x + y;
+//}
 
 
 //class Stu
@@ -162,60 +162,90 @@ int Cal::sum()
 //	cout << "mark is " << ob1.mark << endl;
 //}
 
-class Student
-{
+//class Student
+//{
+//private:
+//	string name;
+//	int mark;
+//
+//public:
+//	Student()
+//	{
+//		cout << "whit is your name? " << name <<  endl;
+//		cin >> name;
+//
+//		cout << "whit is your mark? " << mark << endl;
+//		cin >> mark;
+//	}
+//	Student(string n, int m)
+//	{
+//		name = n;
+//		mark = m;
+//
+//	}
+//	friend void sum(Student ob1, Student ob2, Student ob3);
+//	
+//
+//
+//		int checkMark(Student ob1, Student ob2, Student ob3)
+//		{
+//			Student highest = ob1;
+//
+//
+//			if (highest.mark < ob2.mark)
+//			{
+//				highest = ob2;
+//			}
+//			if (highest.mark < ob3.mark)
+//			{
+//				highest = ob3;
+//			}
+//
+//			cout << "name: " << highest.name << endl;
+//			cout << "mark: " << highest.mark << endl;
+//
+//
+//			return highest.mark;
+//		}
+//	
+//};
+//
+//void sum(Student ob1, Student ob2, Student ob3)
+//{
+//	int sum = ob1.mark + ob2.mark + ob3.mark;
+//	cout << "the sum of the marks" << sum << endl;
+//}
+
+class My {
 private:
-	string name;
-	int mark;
-
+	int x;
 public:
-	Student()
+	My()
 	{
-		cout << "whit is your name? " << name <<  endl;
-		cin >> name;
-
-		cout << "whit is your mark? " << mark << endl;
-		cin >> mark;
-	}
-	Student(string n, int m)
-	{
-		name = n;
-		mark = m;
+		//x = y;
+		cout << "Im first constrctour \n";
 
 	}
-	friend void sum(Student ob1, Student ob2, Student ob3);
-	
-
-
-		int checkMark(Student ob1, Student ob2, Student ob3)
-		{
-			Student highest = ob1;
-
-
-			if (highest.mark < ob2.mark)
-			{
-				highest = ob2;
-			}
-			if (highest.mark < ob3.mark)
-			{
-				highest = ob3;
-			}
-
-			cout << "name: " << highest.name << endl;
-			cout << "mark: " << highest.mark << endl;
-
-
-			return highest.mark;
-		}
-	
+	void setVal()
+	{
+		x = 20;
+	}
+	void print()
+	{
+		cout << "x: " << x << endl;
+	}
 };
 
-void sum(Student ob1, Student ob2, Student ob3)
-{
-	int sum = ob1.mark + ob2.mark + ob3.mark;
-	cout << "the sum of the marks" << sum << endl;
-}
 
+class St : public My {
+private:
+	int y;
+public:
+	//St(int w)
+	//{
+	//	cout << "Im scund contrctour" << endl;
+	//}
+};
 
 int main()
 {
@@ -256,14 +286,15 @@ int main()
 	//st.print();
 	//show(st);
 
-	Student ob1("ahmed", 100);
-	Student ob2("ali", 80);
-	Student ob3("nur", 40);
+	//Student ob1("ahmed", 100);
+	//Student ob2("ali", 80);
+	//Student ob3("nur", 40);
 
-	sum(ob1, ob2, ob3);
-	cout << endl;
-	ob1.checkMark(ob1, ob2, ob3);
+	//sum(ob1, ob2, ob3);
+	//cout << endl;
+	//ob1.checkMark(ob1, ob2, ob3);
 
+	St ob1;
 	
 	 
 
