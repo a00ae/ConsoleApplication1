@@ -5,112 +5,99 @@
 using namespace std;
 
 
+// 1. هيكل المنتج الأساسي
 struct Product {
-	string name;
-	int serialNumber;
-	int quantity;
-	double price;
+    string name;
+    int id;
+    int quantity;
+    double price;
 };
 
-class DiscountedProduct : public Product
-{
+// 2. الفئة الابن للمنتجات المخفضة (ترث من المنتج الأساسي)
+class DiscountedProduct : public Product {
 private:
-	double discount;
+    double discountPercent; // نسبة الخصم الخاصة بهذا المنتج
 
 public:
-	void setDetalis(string n, int sn, int q, double p, double d)
-	{
-		name = n;
-		serialNumber = sn;
-		quantity = q;
-		price = p;
-		discount = d;
-	}
-	double getFinalPrice()
-	{
-		return price - discount;
-	}
-	void print()
-	{
-		cout << "Name: " << name
-			<< " | Serial: " << serialNumber
-			<< " | Qty: " << quantity
-			<< " | Price after discount: $" << getFinalPrice() << endl;
-	}
+    // دالة تعيين التفاصيل التي استخدمتها في دالة main
+    void setDetalis(string pName, int pId, int pQty, double pPrice, double pDiscount) {
+        name = pName;
+        id = pId;
+        quantity = pQty;
+        price = pPrice;
+        discountPercent = pDiscount;
+    }
+
+    // دالة لحساب السعر الفعلي بعد الخصم للمنتج الواحد
+    double getDiscountedPrice() const {
+        return price * (1 - (discountPercent / 100));
+    }
 };
 
-class Store
-{
+// 3. فئة المتجر لإدارة المخزن والفواتير
+class Store {
 private:
-	vector<DiscountedProduct> productList;
+    vector<DiscountedProduct> inventory; // قائمة المنتجات في المتجر
+    const double taxPercent = 15.0;      // قيمة ضريبة ثابتة (استخدام const)
+
 public:
-	void addProduct(DiscountedProduct prod)
-	{
-		productList.push_back(prod);
-		cout << "Product [" << prod.name << "] added successfully.\n";
+    // إضافة منتج للمتجر
+    void addProduct(const DiscountedProduct& p) {
+        inventory.push_back(p);
+    }
 
-	}
-	void updateQuantity(int serial, int newQty)
-	{
-		for (int i = 0; i < productList.size(); i++)
-		{
-			if (productList[i].serialNumber == serial) {
-				productList[i].quantity = newQty;
-				cout << "Quantity updated for Serial " << serial << " to " << newQty << ".\n";
-				return;
-			}
-		}
-		cout << "Product with Serial " << serial << " not found!\n";
-	}
+    // تحديث الكمية بناءً على رقم المنتج (ID)
+    void updateQuantity(int pId, int newQty) {
+        for (size_t i = 0; i < inventory.size(); i++) {
+            if (inventory[i].id == pId) {
+                inventory[i].quantity = newQty;
+                return;
+            }
+        }
+        cout << "Product with ID " << pId << " not found!" << endl;
+    }
 
-	double calculateTotalBill()
-	{
-		const double TAX_RATE = 0.15;
-		double subtotal = 0.0;
+    // طباعة جرد المخزن الحالي
+    void printInventory() const {
+        cout << "\n-------------- Store Inventory --------------" << endl;
+        for (size_t i = 0; i < inventory.size(); i++) {
+            cout << "ID: " << inventory[i].id
+                << " | Name: " << inventory[i].name
+                << " | Qty: " << inventory[i].quantity
+                << " | Price after Discount: $" << inventory[i].getDiscountedPrice() << endl;
+        }
+        cout << "------------------------------------------------\n" << endl;
+    }
 
-		for (int i = 0; i < productList.size(); i++)
-		{
-			subtotal += (productList[i].getFinalPrice() * productList[i].quantity);
-		}
-
-		double taxAmount = subtotal * TAX_RATE;
-		double totalBill = subtotal + taxAmount;
-
-		cout << "\n--- Invoice Details ---\n";
-		cout << "Subtotal (Before Tax): $" << subtotal << endl;
-		cout << "Tax Amount (" << (TAX_RATE * 100) << "%): $" << taxAmount << endl;
-
-		return totalBill;
-	}
-
-	void printInventory()
-	{
-		cout << "\n--- Current Inventory ---\n";
-		for (int i = 0; i < productList.size(); i++) {
-			productList[i].print();
-		}
-	}
+    // حساب الفاتورة الإجمالية مع الضريبة للكميات المتوفرة
+    double calculateTotalBill() const {
+        double total = 0;
+        for (size_t i = 0; i < inventory.size(); i++) {
+            total += inventory[i].getDiscountedPrice() * inventory[i].quantity;
+        }
+        // إضافة الضريبة 15%
+        total += total * (taxPercent / 100);
+        return total;
+    }
 };
 
 void store()
 {
-	Store myStore;
+    Store myStore;
 
-	DiscountedProduct p1, p2;
-	p1.setDetalis("laptop", 213, 2, 101, 10);
-	p2.setDetalis("Mouse", 214, 1, 90, 12);
+    DiscountedProduct p1, p2;
+    p1.setDetalis("laptop", 213, 2, 101, 10);
+    p2.setDetalis("Mouse", 214, 1, 90, 12);
 
+    myStore.addProduct(p1);
+    myStore.addProduct(p2);
 
-	//
+    // تحديث الكمية وطباعة المخزن
+    myStore.updateQuantity(214, 4);
+    myStore.printInventory();
 
-	myStore.addProduct(p1);
-	myStore.addProduct(p2);
-	//myStore.printInventory();
+    // حساب الفاتورة النهائية
+    double finalInvoice = myStore.calculateTotalBill();
+    cout << "Total Bill (With Tax): $" << finalInvoice << endl;
 
-	myStore.updateQuantity(214, 4);
-	myStore.printInventory();
-
-	double finalInvoice = myStore.calculateTotalBill();
-
-	cout << "Total Bill (With Tax): $" << finalInvoice << endl;
 }
