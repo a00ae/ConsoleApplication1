@@ -220,9 +220,10 @@ class My {
 private:
 	int x;
 public:
-	My()
+	My(int a)
 	{
-		//x = y;
+		x = a;
+		cout << x << "\n";
 		cout << "Im first constrctour \n";
 
 	}
@@ -241,10 +242,13 @@ class St : public My {
 private:
 	int y;
 public:
-	//St(int w)
-	//{
-	//	cout << "Im scund contrctour" << endl;
-	//}
+
+	St(int a, int b):My(a)
+	{
+		y = b;
+		cout << y << endl;
+		cout << "Im scund contrctour" << endl;
+	}
 };
 
 int main()
@@ -294,7 +298,7 @@ int main()
 	//cout << endl;
 	//ob1.checkMark(ob1, ob2, ob3);
 
-	St ob1;
+	St ob1(10, 12);
 	
 	 
 
