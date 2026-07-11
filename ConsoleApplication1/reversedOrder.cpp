@@ -12,16 +12,18 @@ int redNumberPositive(string message) {
 }
 
 
-void printDigits(int number)
+int printDigits(int number)
 {
+	int sum = 0;
 	int remainder = 0;
-	while (number > 0) {
-		remainder = number % 10;
-		number = number / 10;
-		cout << remainder << endl;
+	while (number > 0) {		
+		remainder = number % 10; //Accessing the units digit
+		number = number / 10; //Removing the units digit
+		sum += remainder;
 	}
+	return sum;
 }
 void reversedOrder()
 {
-	printDigits(redNumberPositive("Plase a positive number"));
+	cout << printDigits(redNumberPositive("Plase a positive number")) ;
 }
