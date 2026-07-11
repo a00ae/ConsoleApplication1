@@ -6,5 +6,6 @@ void store();
 void test();
 void prime();
 void perfect();
+void primeAndpervect();
 
 #endif

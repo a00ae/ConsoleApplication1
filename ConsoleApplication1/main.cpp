@@ -331,9 +331,14 @@ int main()
 
 
 	//store();
+	// 1 #propleam
 	//test();
+	// 2 #propleam
 	//prime();
-	perfect();
+	 //3 #propleam
+	//perfect();
+	//4 propleam
+	primeAndpervect();
 	return 0;
 
 
