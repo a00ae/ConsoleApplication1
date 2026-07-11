@@ -142,6 +142,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="perfectNumber.cpp" />
+    <ClCompile Include="primeAndperfect.cpp" />
     <ClCompile Include="primeNumber.cpp" />
     <ClCompile Include="store.cpp" />
     <ClCompile Include="test.cpp" />
