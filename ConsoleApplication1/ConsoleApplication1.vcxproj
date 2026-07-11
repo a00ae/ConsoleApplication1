@@ -141,7 +141,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="prime.cpp" />
+    <ClCompile Include="perfectNumber.cpp" />
+    <ClCompile Include="primeNumber.cpp" />
     <ClCompile Include="store.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>

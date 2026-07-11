@@ -24,7 +24,10 @@
     <ClCompile Include="test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="prime.cpp">
+    <ClCompile Include="primeNumber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="perfectNumber.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
