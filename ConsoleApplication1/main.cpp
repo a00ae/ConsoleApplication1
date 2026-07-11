@@ -330,7 +330,8 @@ int main()
 	//}
 
 
-	store();
+	//store();
+	test();
 	return 0;
 
 
