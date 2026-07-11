@@ -3,5 +3,6 @@
 
 
 void store();
+void test();
 
 #endif
