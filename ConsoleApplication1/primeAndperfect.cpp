@@ -28,10 +28,8 @@ bool isPerveectNumber(int number)
 void PrintRedPrime(int n)
 {
 	for (int i = 1; i <= n; i++) {
-		cout << "false" << endl;
 		if (isPerveectNumber(i)) 
 		{
-			cout << "true" << endl;
 			cout << i << endl;
 		}
 	}

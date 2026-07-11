@@ -7,5 +7,5 @@ void test();
 void prime();
 void perfect();
 void primeAndpervect();
-
+void reversedOrder();
 #endif
