@@ -332,7 +332,8 @@ int main()
 
 	//store();
 	//test();
-	prime();
+	//prime();
+	perfect();
 	return 0;
 
 
