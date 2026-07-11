@@ -4,5 +4,6 @@
 
 void store();
 void test();
+void prime();
 
 #endif

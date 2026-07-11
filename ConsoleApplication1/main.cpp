@@ -331,7 +331,8 @@ int main()
 
 
 	//store();
-	test();
+	//test();
+	prime();
 	return 0;
 
 

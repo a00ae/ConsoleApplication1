@@ -26,10 +26,10 @@ void printMultiplicatonTable() {
 	printTableHeader();
 	for (int i = 1; i <= 10; i++)
 	{
-		cout << " " << i  << colmunSperatour(i)<< "\t";
+		cout << " " << i  << colmunSperatour(i);
 
 		for (int j = 1; j <= 10; j++) {
-			cout <<  i * j << "\t";
+			cout << "\t" <<  i * j ;
 		}
 		cout << "\n";
 	}
