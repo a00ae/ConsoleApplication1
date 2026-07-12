@@ -59,7 +59,7 @@ void printAllDigits(int number) {
 
 
 void frequency() {
-	int number = getNumPositive("Plase a positive number?");
+	int number = getNumPositive("Please enter a positive number:");
 
 	printAllDigits(number);
 }

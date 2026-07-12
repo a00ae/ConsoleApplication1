@@ -9,4 +9,5 @@ void perfect();
 void primeAndpervect();
 void reversedOrder();
 void frequency();
+void problem10();
 #endif
