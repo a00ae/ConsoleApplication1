@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-/* probleam 9*/
+/* Problem 9 */
 
-//1
-/* git number positive */
-int gitNumPositive(string message)
+
+// 1. Get a positive number from the user
+int getNumPositive(string message)
 {
 	int number;
 	do {
@@ -15,9 +15,8 @@ int gitNumPositive(string message)
 
 	return number;
 
-};
-//2
-/* Print the number verification request */
+}
+// 2. Count how many times a specific digit appears in the number
 int comparingToNum2(short digitCheck, int number) {
 	int remainder = 0;
 	int freq = 0;
@@ -38,8 +37,7 @@ int comparingToNum2(short digitCheck, int number) {
 
 }
 
-//3
-/* Comparing the numbers */  
+// 3. Print the frequency of all digits from 0 to 9
 void printAllDigits(int number) {
 	/*number = These are the numbers that the user entered. */
 	cout << endl;
@@ -61,7 +59,7 @@ void printAllDigits(int number) {
 
 
 void frequency() {
-	int number = gitNumPositive("Plase a positive number?");
+	int number = getNumPositive("Plase a positive number?");
 
 	printAllDigits(number);
 }
