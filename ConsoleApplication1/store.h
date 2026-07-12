@@ -8,4 +8,5 @@ void prime();
 void perfect();
 void primeAndpervect();
 void reversedOrder();
+void frequency();
 #endif

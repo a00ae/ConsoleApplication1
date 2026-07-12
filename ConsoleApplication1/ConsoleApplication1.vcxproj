@@ -145,6 +145,7 @@
     <ClCompile Include="primeAndperfect.cpp" />
     <ClCompile Include="primeNumber.cpp" />
     <ClCompile Include="reversedOrder.cpp" />
+    <ClCompile Include="primeAndperfect8.cpp" />
     <ClCompile Include="store.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
