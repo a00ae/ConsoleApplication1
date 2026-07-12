@@ -339,8 +339,10 @@ int main()
 	//perfect();
 	//4 propleam
 	//primeAndpervect();
-	//5 #propleam
-	reversedOrder();
+	//5 #propleam + ^  + 6 + 7 + 8
+	//reversedOrder();
+	//9 #propleam
+	frequency();
 	return 0;
 
 
