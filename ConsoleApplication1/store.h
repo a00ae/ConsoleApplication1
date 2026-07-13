@@ -12,4 +12,5 @@ void frequency();
 void problem10();
 void problem11();
 void problem12();
+void problem13();
 #endif
