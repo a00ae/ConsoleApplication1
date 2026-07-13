@@ -10,4 +10,6 @@ void primeAndpervect();
 void reversedOrder();
 void frequency();
 void problem10();
+void problem11();
+void problem12();
 #endif

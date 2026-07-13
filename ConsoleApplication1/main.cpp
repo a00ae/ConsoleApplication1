@@ -344,7 +344,11 @@ int main()
 	//9 #problem
 	//frequency();
 	//10 #problem
-	problem10();
+	//problem10();
+	//11 #problem
+	//problem11();
+	//12 #problem
+	problem12();
 	return 0;
 
 
@@ -357,4 +361,4 @@ int main()
 
 	
 
-};
+}
