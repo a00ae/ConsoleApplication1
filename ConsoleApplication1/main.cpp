@@ -348,7 +348,9 @@ int main()
 	//11 #problem
 	//problem11();
 	//12 #problem
-	problem12();
+	//problem12();
+	//12 #problem
+	problem13();
 	return 0;
 
 
