@@ -331,18 +331,24 @@ int main()
 
 
 	//store();
-	// 1 #propleam
+	// 1 #problem
 	//test();
-	// 2 #propleam
+	// 2 #problem
 	//prime();
-	 //3 #propleam
+	 //3 #problem
 	//perfect();
-	//4 propleam
+	//4 problem
 	//primeAndpervect();
-	//5 #propleam + ^  + 6 + 7 + 8
+	//5 #problem + ^  + 6 + 7 + 8
 	//reversedOrder();
-	//9 #propleam
-	frequency();
+	//9 #problem
+	//frequency();
+	//10 #problem
+	//problem10();
+	//11 #problem
+	//problem11();
+	//12 #problem
+	problem12();
 	return 0;
 
 
@@ -355,4 +361,4 @@ int main()
 
 	
 
-};
+}
