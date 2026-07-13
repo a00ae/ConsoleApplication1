@@ -22,6 +22,8 @@ int getNumberPostive(string message) {
 	22
 	1
 */
+
+
 void printNumberPattrrn(int number) {
 
 	for(int i = 1; i <= number; i++) {
@@ -33,26 +35,6 @@ void printNumberPattrrn(int number) {
 	}
 }
 
-// حل الاستاذ
-
-//void printInvertedNumberPattrrn(int number) {
-//
-//	cout << "\n";
-//
-//	for (int i = number; i >= 1; i--) {
-//		// الفرق بين الحلين هو طريقة الطباعة
-//		// في دالة الخاص بي ستطبع من اليمين الى اليسار <=
-//		// في دالة الاستاذ ستطبع من اليسار الى اليمين	=>
-//
-//		// القيمة الاولية لدي مايدخله المستخدم اذا كان الرقم 5
-//		for (int j = 1; j <= i; j++) {
-//			cout << i;
-//		}
-//		cout << "\n";
-//	}
-//
-//	cout << "\n";
-//}
 void problem13() {
 	printNumberPattrrn(getNumberPostive("Please enter a positive number:"));
 } 
