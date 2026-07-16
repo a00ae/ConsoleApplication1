@@ -349,18 +349,12 @@ int main()
 	//problem11();
 	//12 #problem
 	//problem12();
-	//12 #problem
-	problem13();
+	//13 #problem
+	//problem13();
+	//14 #problem
+	problem14();
 	return 0;
 
 
-	
-
-	
-	 
-
-
-
-	
 
 }
