@@ -358,7 +358,10 @@ int main()
 	//16 #problem
 	//problem16();
 	//17 #problem
-	problem17();
+	//problem17();
+	//18 #problem
+	problem18();
+	
 	return 0;
 
 
