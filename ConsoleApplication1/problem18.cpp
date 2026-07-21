@@ -11,7 +11,7 @@ string readText() {
 }
 
 string  encryptText(string text, short encryptionKey) {
-
+	// نقوم بغلب الاحراف الى ارقم وتزويد رقمين اثنين على كل حرف
 	for (int i = 0; i <= text.length(); i++) {
 		text[i] = char((int)text[i] + encryptionKey);
 	}
@@ -20,7 +20,7 @@ string  encryptText(string text, short encryptionKey) {
 
 string decryptText(string text, short encryptionKey) {
 
-
+	// نقوم بغلب الاحراف الى ارقام وطرح الارقام التى قمنا باضفتها في الدالة السابقة 
 	for (int i = 0; i <= text.length(); i++) {
 		text[i] = char((int)text[i] - encryptionKey);
 	}
@@ -39,8 +39,11 @@ void problem18() {
 
 	string text = readText();
 
+	// هنا نضيف معاملين الاول النص الذ قمن باخذه من المستخدم والثاني العدد الذي قمنا بزويده
 	textAfterEncryption = encryptText(text, encryptionKey);
 
+	
+	// هنا نعيد الاسم المزيف لكي يقو م بالطرح منه 
 	textAfterDecryption = decryptText(textAfterEncryption, encryptionKey);
 
 

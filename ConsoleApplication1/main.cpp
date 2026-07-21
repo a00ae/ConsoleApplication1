@@ -360,7 +360,14 @@ int main()
 	//17 #problem
 	//problem17();
 	//18 #problem
-	problem18();
+	//problem18();
+	//19 #problem
+	//problem19();
+
+	/*20 => 29 */
+
+	// 20 #problem 
+	problem20();
 	
 	return 0;
 
