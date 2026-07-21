@@ -18,4 +18,6 @@ void problem15();
 void problem16();
 void problem17();
 void problem18();
+void problem19();
+void problem20();
 #endif

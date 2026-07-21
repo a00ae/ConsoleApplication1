@@ -153,6 +153,8 @@
     <ClCompile Include="problem16.cpp" />
     <ClCompile Include="problem17.cpp" />
     <ClCompile Include="problem18.cpp" />
+    <ClCompile Include="problem19.cpp" />
+    <ClCompile Include="problem20.cpp" />
     <ClCompile Include="reversedOrder.cpp" />
     <ClCompile Include="primeAndperfect8.cpp" />
     <ClCompile Include="store.cpp" />
