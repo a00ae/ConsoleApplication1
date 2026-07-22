@@ -6,6 +6,8 @@
 using namespace std;
 
 
+/* 24 */
+
 
 
 int randomNumberArrayMax(int from, int to) {

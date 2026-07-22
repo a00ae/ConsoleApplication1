@@ -375,7 +375,9 @@ int main()
 	// 23 #problem
 	//problem23();
 	// 24 #problem
-	problem24();
+	//problem24();
+	// 25 #problem
+	problem25();
 
 	
 	return 0;
