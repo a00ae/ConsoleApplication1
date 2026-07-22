@@ -24,5 +24,7 @@
 //void problem22();
 //void problem23();
 //void problem24();
-void problem25();
+//void problem25();
+//void problem26();
+void problem27();
 #endif
