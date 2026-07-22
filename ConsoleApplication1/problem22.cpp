@@ -43,6 +43,7 @@ void printArray(int arr[100], int arrLength) {
 
 
 int timesRepeated(int number, int arr[100], int arrLength) {
+	//timis
 	int count = 0;  // Initialize a counter to zero.
 	// Loop through the array indices from 0 to arrLength - 1.
 	for (int i = 0; i <= arrLength - 1; i++)

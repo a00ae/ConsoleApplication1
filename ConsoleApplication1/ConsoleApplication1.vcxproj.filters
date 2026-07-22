@@ -78,6 +78,9 @@
     <ClCompile Include="problem22.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="problem23.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="store.h">
