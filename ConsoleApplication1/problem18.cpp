@@ -39,7 +39,7 @@ void problem18() {
 
 	string text = readText();
 
-	// هنا نضيف معاملين الاول النص الذ قمن باخذه من المستخدم والثاني العدد الذي قمنا بزويده
+	// هنا نضيف معاملين الاول النص الذ قمن باخذه من المستخدم والثاني العدد الذي قمنا بتزويده
 	textAfterEncryption = encryptText(text, encryptionKey);
 
 	

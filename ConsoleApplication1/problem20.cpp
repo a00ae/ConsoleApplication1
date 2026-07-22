@@ -5,8 +5,6 @@ using namespace std;
 
 int randomNumber(int from, int to) {
 
-
-
 	int randNum = rand() % (to - from + 1) + from;
 
 	return randNum;

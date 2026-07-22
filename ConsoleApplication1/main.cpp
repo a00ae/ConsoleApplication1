@@ -367,7 +367,10 @@ int main()
 	/*20 => 29 */
 
 	// 20 #problem 
-	problem20();
+	//problem20();
+	// 21 #problem 
+	problem21();
+
 	
 	return 0;
 
