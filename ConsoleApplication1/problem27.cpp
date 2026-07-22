@@ -45,18 +45,22 @@ void printNumbersAvg(int arr[100], int arrLength) {
 }
 
 
-int avgNumber(int arr[100], int arrLength) {
+int sumNumberAvg(int arr[100], int arrLength) {
 	int sum = 0;
-	int avg = 0;
 
 	for (int i = 0; i < arrLength; i++) {
 
 		sum += arr[i];
-		avg = sum / arrLength;
 
 	}
 
-	return avg;
+	return sum;
+}
+
+float avgNumber(int arr[100], int arrLength) {
+	
+	return (float)sumNumberAvg(arr, arrLength) / arrLength;
+	
 }
 
 
