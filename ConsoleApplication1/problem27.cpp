@@ -4,9 +4,9 @@
 
 using namespace std;
 
-/* sum */
+/* Avrage */
 
-int randomNumbersSum(int from, int to) {
+int randomNumbersAvg(int from, int to) {
 
 
 	int randNumber = rand() % (to - from + 1) + from;
@@ -15,7 +15,7 @@ int randomNumbersSum(int from, int to) {
 }
 
 
-void FillArrayWithRandomNumbersSum(int arr[100], int& arrLength) {
+void FillArrayWithRandomNumbersAvg(int arr[100], int& arrLength) {
 
 	cout << "\nEnter number of elements:\n";
 
@@ -23,13 +23,13 @@ void FillArrayWithRandomNumbersSum(int arr[100], int& arrLength) {
 	cin >> arrLength;
 
 	for (int i = 0; i < arrLength; i++) {
-		arr[i] = randomNumbersSum(1, 100);
+		arr[i] = randomNumbersAvg(1, 100);
 	}
 
 }
 
 
-void printNumbersSum(int arr[100], int arrLength) {
+void printNumbersAvg(int arr[100], int arrLength) {
 
 	cout << "\n";
 
@@ -45,32 +45,33 @@ void printNumbersSum(int arr[100], int arrLength) {
 }
 
 
-int sumNumber(int arr[100], int arrLength) {
+int avgNumber(int arr[100], int arrLength) {
 	int sum = 0;
+	int avg = 0;
 
 	for (int i = 0; i < arrLength; i++) {
 
 		sum += arr[i];
-
+		avg = sum / arrLength;
 
 	}
 
-	return sum;
+	return avg;
 }
 
 
-void problem26() {
+void problem27() {
 
 	srand((unsigned)time(NULL));
 
 	int array[100];
 	int arrLength;
 
-	FillArrayWithRandomNumbersSum(array, arrLength);
+	FillArrayWithRandomNumbersAvg(array, arrLength);
 
 	cout << "\nArray Elements: ";
-	printNumbersSum(array, arrLength);
+	printNumbersAvg(array, arrLength);
 
-	cout << "Sum: " << sumNumber(array, arrLength) << endl;
+	cout << "Avg: " << avgNumber(array, arrLength) << endl;
 
 }
