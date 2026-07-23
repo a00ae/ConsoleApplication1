@@ -381,7 +381,9 @@ int main()
 	// 26 #problem
 	//problem26();
 	// 27 #problem 
-	problem27();
+	//problem27();
+	// 28 #problem
+	problem28();
 
 	
 	return 0;

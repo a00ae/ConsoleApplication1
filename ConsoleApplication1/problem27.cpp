@@ -46,19 +46,19 @@ void printNumbersAvg(int arr[100], int arrLength) {
 
 
 int sumNumberAvg(int arr[100], int arrLength) {
+	// تعريف متغير لحفظ القيمة وادراج قيمة اولية 0
 	int sum = 0;
-
+	// عمل حلقة تكرارية على العناصر المخزنة في الذاكرة
 	for (int i = 0; i < arrLength; i++) {
-
+		// اضافة القيم المخزنة الى متغير
 		sum += arr[i];
-
 	}
-
+	// ارجع قيمة المتغير
 	return sum;
 }
-
+// اضافة دالة لحساب متوسط القيم
 float avgNumber(int arr[100], int arrLength) {
-	
+	//من خلال امر واحد ارجاع عدد غير صحيح مجموع العملية الحسابية السابقة قسمة عدد العناصر 
 	return (float)sumNumberAvg(arr, arrLength) / arrLength;
 	
 }
