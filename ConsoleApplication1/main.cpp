@@ -383,7 +383,9 @@ int main()
 	// 27 #problem 
 	//problem27();
 	// 28 #problem
-	problem28();
+	//problem28();
+	// 29 #problem
+	problem29();
 
 	
 	return 0;

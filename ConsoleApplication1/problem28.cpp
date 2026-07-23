@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>    // Include cstdlib for rand() and srand() functions.
 #include <ctime>
-
+/*	28	*/
 using namespace std;
 
 int readPositiveNumCopy(string m, int &num) {
